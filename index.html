@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Joelguerrero.GitHub.io : github page">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Joelguerrero.GitHub.io</title>
+  </head>
+
+
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://gitlab.com/alie89/flubio-code-fvm">View on GitLab</a>
+
+          <h1 id="project_title">FLUBIO</h1>
+          <h2 id="project_tagline">FLUBIO—An unstructured, parallel, finite-volume based Navier–Stokes and convection–diffusion like equations solver for teaching and research purposes</h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+
+
+
+<h3>
+Welcome to FLUBIO homepage
+</h3>
+
+<p>
+FLUBIO is a parallel, unstructured, finite-volume based solver for the solution of the Navier–Stokes equations and convection–diffusion like equations. The solver is written using modern Fortran (2003+ standard), it is object-oriented, and is organized in such a way that it is easy to understand and modify. The solver is targeted at students, academics, personal users, and practitioners to help them understand the general theory behind modern CFD solution methods and discretization techniques. The solver is also general and capable enough to deal with industrial and academic problems found in the field of fluid dynamics.  
+</p>
+
+<br>
+
+<h3>
+Where can I download FLUBIO?
+</h3>
+
+<p>
+To download FLUBIO, visit the project's <a href="https://gitlab.com/alie89/flubio-code-fvm">GitLab repository</a>.
+</p>
+
+<br>
+
+<h3>
+How to install FLUBIO?
+</h3>
+
+<p>
+FLUBIO installation is straightforward on UNIX-Linux OS. You can find the installation instructions <a href="https://gitlab.com/alie89/flubio-code-fvm/-/blob/master/FLUBIO_INSTALL.pdf">at this link</a> or in the project's <a href="https://gitlab.com/alie89/flubio-code-fvm">GitLab repository</a>.
+</p>
+
+<br>
+
+<h3>
+What can I do with FLUBIO?
+</h3>
+
+<p>
+FLUBIO can deal with one-dimensional, two-dimensional, and three-dimensional domains. It uses unstructured meshes, and in theory, can handle any cell element type (tetrahedrons, hexes, prisms, pyramids, and general polyhedrons). Hybrid meshes, made up ofany combination of the cell types mentioned previously, are also supported. FLUBIO does not support hanging nodes. 
+
+<br>
+<br>
+
+FLUBIO has been fully parallelized by using domain decomposition and the message passing interface library OpenMPI. To solve the linear systems arising from the discretization of the governing equations, FLUBIO uses the high performance computing library PETSc, which is a collection of routines for efficient and scalable scientific computing.
+
+<br>
+<br>
+
+FLUBIO comes with many solvers, each one dealing with different governing equations commonly encountered in CFD. FLUBIO can deal with the following equations:
+
+<br>
+
+<ul class="a">
+
+    <li>Poisson equation.</li>
+
+    <li>Laplace equation.</li>
+
+    <li>Burgers equation.</li>
+
+    <li>General transport equation.</li>
+
+    <li>Incompressible single-phase Navier-Stokes equations (laminar and turbulent).</li>
+
+</ul> 
+
+<br>
+
+The solver is cell-centered, and it uses segregated methods to deal with the pressure–velocity coupling of the Navier–Stokes equations (e.g., SIMPLE method and PISO method). To avoid the checkerboard instability, the Rhie–Chow interpolation is used. Many high-order and high-resolution methods are implemented, which guarantees at least second-order accurate solutions. The time-derivative, convective terms, diffusive terms, and gradient terms appearing in the governing equations can be discretized in a term-by-term basis; that is, the user can use any combination of different numerical schemes. To enforce the monotonicity principle, slope limiters are implemented. Steady and unsteady simulations are supported. For turbulence modeling, both Reynolds Averaged Navier–Stokes (RANS) and Large Eddy Simulation (LES) models are available.
+
+</p>
+
+<br>
+
+<h3>
+Some colorful applications
+</h3>
+
+<p>
+Coming soon.
+</p>
+
+<br>
+
+<h3>
+How to cite FLUBIO?
+</h3>
+
+<ul class="a">
+<li>
+E. Alinovi, J. Guerrero, "FLUBIO – An unstructured, parallel, finite-volume based Navier-Stokes and convection-diffusion like equations solver for teaching and research purposes," SoftwareX, Volume 13, January 2021, 100655. <a href="https://doi.org/10.1016/j.softx.2020.100655">https://doi.org/10.1016/j.softx.2020.100655</a>
+</li>
+</ul> 
+
+<br>
+
+<h3>
+Support
+</h3>
+
+<p>
+FLUBIO is on constant development. For reporting issues please use the issue tracker on the project's <a href="https://gitlab.com/alie89/flubio-code-fvm">GitLab repository</a>.
+</p>
+
+<br>
+
+<!-- <h3>
+Do you want to help?
+</h3>
+
+<p>
+If you want to help us in improving FLUBIO, please send an email to edoardo.alinovi@gmail.com or joel.guerrero@unige.it
+</p>
+
+<br> -->
+
+
+
+
+
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
