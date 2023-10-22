@@ -2,13 +2,24 @@
 <html>
 
   <head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LZW11B0HC7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LZW11B0HC7');
+</script>
+    
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Joelguerrero.GitHub.io : github page">
+    <meta name="description" content="https://flubiopetsc.github.io/flubiopetsc/ : github page">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Joelguerrero.GitHub.io</title>
+    <title>FLUBIO-PETSC</title>
   </head>
 
 
@@ -21,7 +32,9 @@
           <a id="forkme_banner" href="https://gitlab.com/alie89/flubio-code-fvm">View on GitLab</a>
 
           <h1 id="project_title">FLUBIO</h1>
-          <h2 id="project_tagline">FLUBIO—An unstructured, parallel, finite-volume based Navier–Stokes and convection–diffusion like equations solver for teaching and research purposes</h2>
+          <h2 id="project_tagline">An unstructured, parallel, finite-volume based Navier–Stokes and convection–diffusion like equations solver</h2>
+
+<!--           <h2 id="project_tagline">FLUBIO—An unstructured, parallel, finite-volume based Navier–Stokes and convection–diffusion like equations solver</h2> -->
 
         </header>
     </div>
@@ -33,14 +46,27 @@
 
 
 <h3>
-Welcome to FLUBIO homepage
+Welcome to FLUBIO solver homepage
 </h3>
 
 <p>
-FLUBIO is a parallel, unstructured, finite-volume based solver for the solution of the Navier–Stokes equations and convection–diffusion like equations. The solver is written using modern Fortran (2003+ standard), it is object-oriented, and is organized in such a way that it is easy to understand and modify. The solver is targeted at students, academics, personal users, and practitioners to help them understand the general theory behind modern CFD solution methods and discretization techniques. The solver is also general and capable enough to deal with industrial and academic problems found in the field of fluid dynamics.  
+FLUBIO (a.k.a. FLUBIO-PETSC) is a parallel, unstructured, finite-volume based solver for the solution of the Navier–Stokes equations and convection–diffusion like equations. The solver is written using modern Fortran (2003+ standard), it is object-oriented, and is organized in such a way that it is easy to understand and modify. The solver is targeted at students, academics, personal users, and practitioners to help them understand the general theory behind modern CFD solution methods and discretization techniques. The solver is also general and capable enough to deal with industrial and academic problems found in the field of fluid dynamics.  
 </p>
 
 <br>
+
+
+<h3>
+News - As of 22OCT2023
+</h3>
+
+<p>
+Stay tuned as a big update is coming, including a cloud-based GUI, better support for PETSC and HYPRE, and new solvers</a>.
+</p>
+
+<br>
+
+
 
 <h3>
 Where can I download FLUBIO?
@@ -67,12 +93,14 @@ What can I do with FLUBIO?
 </h3>
 
 <p>
-FLUBIO can deal with one-dimensional, two-dimensional, and three-dimensional domains. It uses unstructured meshes, and in theory, can handle any cell element type (tetrahedrons, hexes, prisms, pyramids, and general polyhedrons). Hybrid meshes, made up ofany combination of the cell types mentioned previously, are also supported. FLUBIO does not support hanging nodes. 
+FLUBIO can deal with one-dimensional, two-dimensional, and three-dimensional domains. It uses unstructured meshes, and in theory, can handle any cell element type (tetrahedrons, hexes, prisms, pyramids, and general polyhedrons). Hybrid meshes, made up of any combination of the cell types mentioned previously, are also supported. FLUBIO does not support hanging nodes. 
 
 <br>
 <br>
 
-FLUBIO has been fully parallelized by using domain decomposition and the message passing interface library OpenMPI. To solve the linear systems arising from the discretization of the governing equations, FLUBIO uses the high performance computing library PETSc, which is a collection of routines for efficient and scalable scientific computing.
+FLUBIO has been fully parallelized by using domain decomposition and the message passing interface library OpenMPI. To solve the linear systems arising from the discretization of the governing equations, FLUBIO uses the high performance computing library <a href="https://www.mcs.anl.gov/petsc/">PETSc</a>, which is a collection of routines for efficient and scalable scientific computing. 
+
+<!-- FLUBIO solver is also known as FLUBIO-PETSc. -->
 
 <br>
 <br>
@@ -104,11 +132,29 @@ The solver is cell-centered, and it uses segregated methods to deal with the pre
 <br>
 
 <h3>
-Some colorful applications
+Some colorful simulations
 </h3>
 
 <p>
-Coming soon.
+FLUBIO uses the <a href="https://vtk.org/">VTK</a> library to save the solution data (we especifically use the <a href="https://github.com/szaghi/VTKFortran">VTK Fortran</a> library). To visualize the solution, you can use <a href="https://www.paraview.org/">paraview</a>. 
+</p>
+
+<p>
+<a href="simulations.html">At this link</a>, you can find a few colorful simulations.
+</p>
+
+<br>
+
+<h3>
+Getting started with FLUBIO
+</h3>
+
+<p>
+To get started with FLUBIO and to get further information about how to use the solver, we invite you to read the <a href="https://gitlab.com/alie89/flubio-code-fvm/-/blob/master/examples/Tutorials.pdf">tutorial manual</a>, which comes with the source code and is located in the examples directory. 
+</p>
+
+<p>
+<a href="getting_started.html">At this link</a>, you can find a series of videos to help you installing and getting started with FLUBIO.
 </p>
 
 <br>
@@ -125,6 +171,20 @@ E. Alinovi, J. Guerrero, "FLUBIO – An unstructured, parallel, finite-volume ba
 
 <br>
 
+
+<h3>
+Presentations
+</h3>
+
+<ul class="a">
+<li>
+J. Guerrero, E. Alinovi, <a href="docs/FLUBIO_2021-1.pdf"> "FLUBIO-PETSC. Yet another CFD solver in turbulent times,"</a> Computational Rheology Kaizen Meetings. University of Minho, Guimaraes, Portugal. March 11, 2021.
+</li>
+</ul> 
+
+<br>
+
+
 <h3>
 Support
 </h3>
@@ -135,15 +195,15 @@ FLUBIO is on constant development. For reporting issues please use the issue tra
 
 <br>
 
-<!-- <h3>
+<h3>
 Do you want to help?
 </h3>
 
 <p>
-If you want to help us in improving FLUBIO, please send an email to edoardo.alinovi@gmail.com or joel.guerrero@unige.it
+If you want to help us in improving FLUBIO, please send an email to flubiopetsc@gmail.com
 </p>
 
-<br> -->
+<br> 
 
 
 
